@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                >
+
+    <SurfaceView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/camera_view"
+            android:layout_centerVertical="true" android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/code_info"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:text="Nothing to read."
+            android:gravity="center_horizontal"
+            android:background="#ffffff"
+            android:layout_alignParentTop="true"
+    />
+
+    <ProgressBar android:layout_width="match_parent" android:layout_height="wrap_content"
+                 android:id="@+id/pbTicketInfo" android:visibility="gone"
+    />
+    <android.support.v4.widget.NestedScrollView android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+        android:id="@+id/nsvTicket"
+    >
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:id="@+id/lytTicketInfo"
+                      android:layout_gravity="bottom"
+                      android:orientation="vertical"
+                      android:background="#e7ffffff"
+                      android:visibility="gone"
+                      android:layout_marginTop="40dp"
+                      android:gravity="bottom|center_horizontal">
+
+            <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:id="@+id/tvTicketInfo"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:maxLines="10"
+                    android:text="Nothing to read."
+                    android:layout_alignParentTop="true"
+            />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="horizontal" android:gravity="center_horizontal">
+                <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Checkin" android:id="@+id/btnCheckIn"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                />
+                <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Cancel" android:id="@+id/btnCancel"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                />
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</RelativeLayout>
